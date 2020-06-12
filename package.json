@@ -1,79 +1,30 @@
 {
-  "name": "appcenter-sampleapp-react-native",
+  "name": "MyTestApp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "build": "npm install && cd ./android && ./gradlew build && cd ../ios && pod install --repo-update && cd ..",
-    "clean": "rm -rf ./node_modules **/{.project,*.iml,build} ./ios/{Pods,*.xcworkspace} ./android/{.gradle,.idea}",
+    "start": "react-native start",
     "test": "jest",
-    "lint": "eslint .",
-    "format": "prettier --write \"**/*.+(js|ts|tsx)\""
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@react-native-community/cli-platform-android": "^4.1.1",
-    "@types/react": "^16.9.25",
-    "@types/react-native": "^0.61.14",
-    "@types/react-navigation": "^3.4.0",
-    "appcenter": "3.0.1",
-    "appcenter-analytics": "2.6.1",
-    "appcenter-crashes": "2.6.1",
-    "react": "^16.12.0",
-    "react-native": "^0.61.5",
-    "react-native-code-push": "^6.0.0",
-    "react-native-gesture-handler": "^1.5.6",
-    "react-native-iphone-x-helper": "^1.2.1",
-    "react-native-reanimated": "^1.7.0",
-    "react-native-screens": "^2.0.0-beta.10",
-    "react-navigation": "^4.1.1",
-    "react-navigation-drawer": "^2.3.4",
-    "react-navigation-stack": "^1.10.3",
-    "react-navigation-tabs": "^2.7.0"
+    "aws-sdk": "^2.649.0",
+    "react": "16.11.0",
+    "react-native": "0.62.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/runtime": "^7.8.4",
-    "@react-native-community/eslint-config": "^0.0.7",
-    "@types/jest": "^25.1.3",
-    "@types/react-test-renderer": "^16.9.2",
-    "babel-jest": "^25.1.0",
-    "eslint": "^6.8.0",
-    "jest": "25.1.0",
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.58.0",
-    "react-native-typescript-transformer": "^1.2.13",
-    "react-test-renderer": "^16.12.0",
-    "ts-jest": "^25.2.0",
-    "typescript": "^3.8.3"
+    "react-test-renderer": "16.11.0"
   },
   "jest": {
-    "preset": "react-native",
-    "transform": {
-      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!(react-[a-z|-]*)/)"
-    ],
-    "globals": {
-      "ts-jest": {
-        "useBabelrc": true
-      }
-    },
-    "setupFiles": [
-      "./node_modules/appcenter/test/AppCenterMock.js",
-      "./node_modules/appcenter-analytics/test/AppCenterAnalyticsMock.js",
-      "./node_modules/appcenter-crashes/test/AppCenterCrashesMock.js"
-    ]
+    "preset": "react-native"
   }
 }
